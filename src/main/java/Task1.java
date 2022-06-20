@@ -5,8 +5,7 @@ import java.util.Scanner;
  * @see #simpleCalculator(String, double, double) Вычисление не сложных математических операций
  * @see #main(String[]) Основной метод спользуется для операций ввода-вывода
  */
-public class Base {
-
+public class Task1 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Введите первое число:");
