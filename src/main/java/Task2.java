@@ -30,7 +30,7 @@ public class Task2 {
             }
             String s = maxLenght(stringArr);
             System.out.println("Самое длинное слово : " + s);
-        } else System.err.println("Вы выбрали нереальную задачу");
+        } else System.err.println("Вы выбрали несуществующую задачу");
         in.close();
     }
 
@@ -40,7 +40,7 @@ public class Task2 {
      * @param y         Второе значение
      * @return Результат вычисления
      */
-    static double simpleCalculator(String operation, double x, double y) {
+    static double simpleCalculator(String operation, double x, double y) {  //метод для расчетов в зависимости от переданной в консоль операции
         double res = 0;
         switch (operation) {
             case "+":
@@ -69,7 +69,7 @@ public class Task2 {
      * @param stringArr В метод передаем массив строк
      * @return строку
      */
-    static String maxLenght(String[] stringArr) {
+    static String maxLenght(String[] stringArr) {  //метод для определения самого большого слова в массиве
         int maxLength = 0;
         int maxStrIndex = 0;
         for (int i = 0; i < stringArr.length; i++) {
