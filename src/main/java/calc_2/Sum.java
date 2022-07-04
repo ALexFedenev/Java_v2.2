@@ -7,6 +7,7 @@ public class Sum extends Expression {
 
     @Override
     public double calc() {
+
         return left.calc() + right.calc();
     }
 }

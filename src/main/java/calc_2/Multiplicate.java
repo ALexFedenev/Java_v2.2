@@ -7,6 +7,7 @@ public class Multiplicate extends Expression {
 
     @Override
     public double calc() {
+
         return left.calc() * right.calc();
     }
 }

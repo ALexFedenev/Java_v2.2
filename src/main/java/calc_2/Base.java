@@ -7,5 +7,6 @@ public class Base {
         calculator.readingFromConsole();
         calculator.calculate();
         calculator.outputRes();
+
     }
 }

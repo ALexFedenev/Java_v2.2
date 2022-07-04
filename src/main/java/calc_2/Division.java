@@ -15,8 +15,6 @@ public class Division extends Expression {
                 rex.printStackTrace();
             }
         }
-
         return left.calc() / right.calc();
-
     }
 }

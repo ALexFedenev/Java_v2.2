@@ -27,7 +27,6 @@ public class Calculator {
 
     private Expression parseExpression(String str) {
 
-
         int indexPlus = str.indexOf("+");
         if (indexPlus != -1) {
             String leftStr = str.substring(0, indexPlus);
