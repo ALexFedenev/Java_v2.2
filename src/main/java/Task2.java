@@ -73,7 +73,7 @@ public class Task2 {
         int maxLength = 0;
         int maxStrIndex = 0;
         for (int i = 0; i < stringArr.length; i++) {
-            int currentLength = (int) stringArr[i].chars().distinct().count();
+            int currentLength = stringArr[i].length();
             if (currentLength > maxLength) {
                 maxLength = currentLength;
                 maxStrIndex = i;

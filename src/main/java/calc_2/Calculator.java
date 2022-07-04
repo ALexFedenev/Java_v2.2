@@ -1,8 +1,9 @@
 package calc_2;
+
 import java.util.Scanner;
 
 /**
- *  @author Alex Fedenev
+ * @author Alex Fedenev
  * @see #readingFromConsole() считывает строку из консоли
  * @see #calculate() присваивает полю типа Expression тот или иной расширяющий его объект
  * @see #parseExpression String разбирает входную строку на объекты

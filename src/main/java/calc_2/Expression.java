@@ -8,5 +8,6 @@ public abstract class Expression {
         this.left = left;
         this.right = right;
     }
+
     public abstract double calc();
 }
