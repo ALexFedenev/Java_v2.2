@@ -64,7 +64,6 @@ public class Task2 {
         }
         return res;
     }
-
     /**
      * @param stringArr В метод передаем массив строк
      * @return строку
