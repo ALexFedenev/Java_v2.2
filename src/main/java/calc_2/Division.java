@@ -6,15 +6,10 @@ public class Division extends Expression {
     }
 
     @Override
-    public double calc() {
-        if (right.calc() == 0) {
-            try {
-                throw new RuntimeException();
-            } catch (RuntimeException rex) {
-                System.err.println("Делить на ноль нельзя");
-                rex.printStackTrace();
+    public double calc() throws MyArifmeticException{
+                if (right.calc() == 0) {
+                throw new MyArifmeticException("Нельзя делить на  ноль");
             }
-        }
         return left.calc() / right.calc();
     }
 }

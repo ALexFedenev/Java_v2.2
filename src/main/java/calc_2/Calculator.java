@@ -15,7 +15,7 @@ public class Calculator {
 
     public void readingFromConsole() {
         Scanner in = new Scanner(System.in);
-        System.out.println("Введите выражение из четырёх операций:");
+        System.out.println("Введите выражение, например '2+2':");
         stringFromConsole = in.nextLine();
         in.close();
     }
@@ -64,7 +64,11 @@ public class Calculator {
     }
 
     public void outputRes() {
-
-        System.out.printf("Результат = %.4f", resultExpression.calc());
+        try {
+            System.out.printf("Результат = %.4f", resultExpression.calc());
+        } catch (MyArifmeticException aex) {
+            System.out.println(aex);
+        }
     }
 }
+
