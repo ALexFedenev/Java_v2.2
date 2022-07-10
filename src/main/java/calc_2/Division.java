@@ -6,10 +6,10 @@ public class Division extends Expression {
     }
 
     @Override
-    public double calc() throws MyArifmeticException{
-                if (right.calc() == 0) {
-                throw new MyArifmeticException("Нельзя делить на  ноль");
-            }
+    public double calc() throws MyArifmeticException {
+        if (right.calc() == 0) {
+            throw new MyArifmeticException();
+        }
         return left.calc() / right.calc();
     }
 }

@@ -1,29 +1,26 @@
 package calc_2;
 
-import java.util.Scanner;
-
 /**
  * @author Alex Fedenev
- * @see #readingFromConsole() считывает строку из консоли
- * @see #calculate() присваивает полю типа Expression тот или иной расширяющий его объект
  * @see #parseExpression String разбирает входную строку на объекты
- * @see #outputRes() вызывает метод вычислений и производит форматированный вывод в консоль
  */
 public class Calculator {
-    private String stringFromConsole;
-    private Expression resultExpression;
+    private final String STRINGFROMCONCOLE;
+    private double outRes;
 
-    public void readingFromConsole() {
-        Scanner in = new Scanner(System.in);
-        System.out.println("Введите выражение, например '2+2':");
-        stringFromConsole = in.nextLine();
-        in.close();
+    public Calculator(String stringFromConsole) {
+        this.STRINGFROMCONCOLE = stringFromConsole;
     }
 
-    public void calculate() {
-        resultExpression = parseExpression(stringFromConsole);
+    public String getStringFromConsole() {
+        return STRINGFROMCONCOLE;
     }
 
+    public double getOutRes() {
+        Expression resultExpression = parseExpression(STRINGFROMCONCOLE);
+        outRes = resultExpression.calc();
+        return outRes;
+    }
 
     private Expression parseExpression(String str) {
 
@@ -59,16 +56,7 @@ public class Calculator {
             Expression right = parseExpression(rightStr);
             return new Division(left, right);
         }
-
         return new Value(Double.parseDouble(str));
-    }
-
-    public void outputRes() {
-        try {
-            System.out.printf("Результат = %.4f", resultExpression.calc());
-        } catch (MyArifmeticException aex) {
-            System.out.println(aex);
-        }
     }
 }
 
