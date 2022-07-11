@@ -5,19 +5,28 @@ package calc_2;
  * @see #parseExpression String разбирает входную строку на объекты
  */
 public class Calculator {
-    private final String STRINGFROMCONCOLE;
+    private String stringFromConsole;
     private double outRes;
 
+    public Calculator() {
+    }
+
     public Calculator(String stringFromConsole) {
-        this.STRINGFROMCONCOLE = stringFromConsole;
+
+        this.stringFromConsole = stringFromConsole;
     }
 
     public String getStringFromConsole() {
-        return STRINGFROMCONCOLE;
+
+        return stringFromConsole;
+    }
+
+    public void setStringFromConsole(String stringFromConsole) {
+        this.stringFromConsole = stringFromConsole;
     }
 
     public double getOutRes() {
-        Expression resultExpression = parseExpression(STRINGFROMCONCOLE);
+        Expression resultExpression = parseExpression(stringFromConsole);
         outRes = resultExpression.calc();
         return outRes;
     }
