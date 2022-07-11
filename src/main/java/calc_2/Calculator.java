@@ -7,7 +7,6 @@ package calc_2;
 public class Calculator {
     private String stringFromConsole;
     private double outRes;
-
     public Calculator() {
     }
 
